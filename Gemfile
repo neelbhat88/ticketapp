@@ -37,4 +37,8 @@ gem 'unicorn'
 # To use debugger
 # gem 'debugger'
 
-gem 'rspec-rails'
+group :test do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'factory_girl_rails' ,"~> 4.0"
+end
