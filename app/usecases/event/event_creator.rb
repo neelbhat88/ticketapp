@@ -1,6 +1,7 @@
 class Event::EventCreator
 
-  def initialize()
+  def initialize(event_klass=Event)
+    @event_klass = event_klass
   end
 
   def create(args)
@@ -8,7 +9,7 @@ class Event::EventCreator
     description = args[:description]
     date = args[:date]
 
-    event = Event.new(:name => name, :description => description, :date => date)
+    event = @event_klass.new(:name => name, :description => description, :date => date)
     event.save
 
     event

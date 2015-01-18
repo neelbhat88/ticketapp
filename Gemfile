@@ -37,6 +37,8 @@ gem 'unicorn'
 # To use debugger
 # gem 'debugger'
 
+gem 'devise'
+
 group :test do
   gem 'rspec-rails'
   gem 'rspec-collection_matchers'
